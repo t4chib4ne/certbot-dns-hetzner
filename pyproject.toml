@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certbot-dns-hetzner"
+version = "0.0.1"
+authors = [
+  { name="t4chib4ne", email="t4chib4ne@mailbox.org" },
+]
+description = "Hetzner DNS Plugin for Certbot"
+dependencies = ["certbot"]
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-2.0"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://git/services/hetzner-dns-certbot-plugin"
+Issues = "https://git/services/hetzner-dns-certbot-plugin/issues"
+
+[project.entry-points."certbot.plugins"]
+dns-hetzner = "certbot_dns_hetzner.dns_hetzner:Authenticator"
