@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from certbot_dns_hetzner.api_hetzner import Hetzner
 
 token = input("Please insert your Hetzner Cloud API Token: ")

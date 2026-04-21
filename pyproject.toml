@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "certbot-dns-hetzner"
-version = "0.0.1"
+version = "0.1.1"
 authors = [
   { name="t4chib4ne", email="t4chib4ne@mailbox.org" },
 ]
