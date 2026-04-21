@@ -15,7 +15,7 @@ class Authenticator(dns_common.DNSAuthenticator):
     Authentication Plugin for dns-01 Validation via Hetzner.
     """
 
-    description = "Sets TXT records via Hetzner DNS API for obtaining certificates."
+    description = "Sets TXT records via Hetzner Cloud API for obtaining certificates."
 
     def __init__(self, *args, **kwargs):
         logger.debug("Initializing Authenticator for Hetzner")
@@ -41,7 +41,7 @@ class Authenticator(dns_common.DNSAuthenticator):
                 token = "".join(file.readlines()).replace("\n", "")
                 logger.info("Loaded token from file!")
         else:
-            token = input("Please enter your Hetzner Token: ")
+            token = input("Please enter your Hetzner Cloud API Token: ")
 
         if not token:
             raise ValueError("invalid token")
